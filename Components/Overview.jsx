@@ -2,13 +2,16 @@ import { Container, useTheme, useMediaQuery, Button } from '@mui/material';
 import Chart from './Chart';
 import Line from './Line';
 import { useEffect, useState } from 'react';
-import { Req } from '../src/Url';
+import { Req, token } from '../src/Url';
 import Loader from '../Loader/loader';
 
 
 export default function Overview() {
   const [data, setdata] = useState()
   const [count, setcount] = useState()
+  useEffect(()=>{
+    !token && window.location.reload()
+  })
   useEffect(() => {
     const getBlogData = async () => {
       await Req.get("/blog/Stats")

@@ -16,7 +16,6 @@ import Faqs from '../Pages/Faqs';
 import Blog from '../Pages/Blog';
 import SingleBlog from '../Pages/SIngleBlog';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
 function App() {
   const user = useSelector((state) => state.current)
  

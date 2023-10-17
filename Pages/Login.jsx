@@ -63,9 +63,9 @@ export default function Login() {
                             onChange={(e)=>setusername(e.target.value)}
                             fullWidth
                             id="outlined-required"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
+                            label="Username"
+                            name="username"
+                            autoComplete="username"
                             autoFocus
                         />
                         <FormControl sx={{mt:3}} fullWidth variant="outlined">
