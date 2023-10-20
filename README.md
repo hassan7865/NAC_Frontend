@@ -22,6 +22,18 @@ Welcome to the GitHub repository for the Ned Admission Cell Admin Portal, the fr
 - **React-Toastify** ![React-Toastify](https://img.shields.io/badge/-React_Toastify-FF7E6A?style=flat)
 - **Email.js** ![Email.js](https://img.shields.io/badge/-Email.js-3498DB?style=flat)
 
+## Deployment (Frontend)
+
+The Admin Portal of this project is deployed on Vercel.
+
+![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat&logo=vercel&logoColor=white)
+
+Deployed Website [https://nacadmin.vercel.app/](https://nacadmin.vercel.app/).
+
+## Access Main Website
+
+You can access the main Ned Admission Cell website through the link [https://www.nedadmissioncell.com/](https://www.nedadmissioncell.com/).
+
 ## Installation
 
 To get this project up and running on your local machine, follow these steps:
@@ -29,4 +41,4 @@ To get this project up and running on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/hassan7865/NAC_Frontend.git
+   git clone https://github.com/yourusername/ned-admission-cell-admin-frontend.git
