@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Req } from "../src/Url";
 import Loader from "../Loader/loader";
+import './blog.css'
 export default function SingleBlog() {
     const [blog,setblog] = useState(null)
     const location = useLocation()
@@ -30,9 +31,12 @@ export default function SingleBlog() {
     return (
         <>
         {blog ? 
-        <Container maxWidth="xl" sx={{ marginTop: isSmallScreen ? "80px" : "100px", display: "flex", alignItems: "center", flexDirection: "column" }}>
-            <Box sx={{ width: isSmallScreen ? "100%" : "70%"}}>
-               {blog && parse(html)}
+        <Container maxWidth="xl" sx={{ marginTop: isSmallScreen ? "80px" : "100px",paddingX:"10px",display:"flex",flexDirection:"column",justifyContent:"center" }}>
+            <Box>
+                <div className="Html">
+                {blog && parse(html)}
+                </div>
+               
             </Box>
         </Container>:<Loader/>}
         </>
