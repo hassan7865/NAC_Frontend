@@ -30,7 +30,7 @@ export default function BlogComp({ app,pend, items,handleApprove,handleDelete}) 
             <CardHeader
                 action={
                     <IconButton aria-label="settings" sx={{display:"flex",alignItems:"center",gap:"10px"}} >
-                         <Link style={{ textDecoration: "none", color: "inherit",display:"flex",alignItems:"center" }} to={`/Blogs/${pend ? "pendBlog":"appBlog"}/${items?.title}`}>
+                         <Link style={{ textDecoration: "none", color: "inherit",display:"flex",alignItems:"center" }} to={`/Blogs/${pend ? "pendBlog":"appBlog"}/${items._id}/${items?.title}`}>
                          <RemoveRedEyeIcon  style={{ color: "green" }}/>
                          </Link>
                         <DeleteIcon onClick={()=>handleDelete(items?._id)} style={{ color: "red" }} />

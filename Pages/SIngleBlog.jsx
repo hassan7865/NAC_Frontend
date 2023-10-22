@@ -8,14 +8,16 @@ import './blog.css'
 export default function SingleBlog() {
     const [blog,setblog] = useState(null)
     const location = useLocation()
+    const id = location.pathname.split("/")[3]
     const type = location.pathname.split("/")[2]
-    const title = location.pathname.split("/")[3]
+    const title = location.pathname.split("/")[4]
+
     var decodedString = decodeURIComponent(title);
     const getBlog = async()=>{
-        await Req.get(`/blog/${type}/${decodedString}`)
+        await Req.get(`/blog/${type}/${id}/${decodedString}`)
         .then((res)=>{
             if(res.status === 200){
-                setblog(res.data[0])
+                setblog(res.data)
             }
         })
     }
