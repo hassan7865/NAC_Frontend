@@ -51,7 +51,7 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
             if (result.isConfirmed) {
                 approveBlog(item)
                     .then(() => {
-                        sendEmail(item.authoremail,item._id)
+                        sendEmail(item.authoremail,item.title)
                         Swal.fire(
                             'Approved!',
                             'Blog has been Approved.',
@@ -80,7 +80,7 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
 
             })
     }
-    const sendEmail=(authoremail,id)=>{
+    const sendEmail=(authoremail,title)=>{
         emailjs.init("3nbIneBa4IcP2eXat")
        const serviceId = "service_8ibaqni"
        const templateId = "template_fww1g9u"
@@ -89,7 +89,7 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
         to:authoremail,
         subject:"Approval Of Blog",
         replyto:"neduetadmissioncell@gmail.com",
-        link:"https://www.nedadmissioncell.com/"
+        link:`https://www.nedadmissioncell.com/blogs/${title}`
     
        }
        emailjs.send(serviceId,templateId,templateParams).then(()=>{
