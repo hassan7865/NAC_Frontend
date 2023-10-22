@@ -65,6 +65,7 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
     const approveBlog = async (item) => {
         await Req.post("/blog/appBlog", {
             title: item.title,
+            subtitle:item.subtitle,
             imgUrl: item.imgUrl,
             authorname: item.authorname,
             authoremail: item.authoremail,
