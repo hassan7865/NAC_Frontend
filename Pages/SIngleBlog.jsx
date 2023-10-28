@@ -33,12 +33,9 @@ export default function SingleBlog() {
     return (
         <>
         {blog ? 
-        <Container maxWidth="xl" sx={{ marginTop: isSmallScreen ? "80px" : "100px",paddingX:"10px",display:"flex",flexDirection:"column",justifyContent:"center" }}>
+        <Container maxWidth="xl" sx={{ marginTop: isSmallScreen ? "80px" : "100px",paddingX:"10px" }}>
             <Box>
-                <div className="Html">
                 {blog && parse(html)}
-                </div>
-               
             </Box>
         </Container>:<Loader/>}
         </>
