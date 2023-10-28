@@ -27,9 +27,11 @@ export default function AddTests({ open, setOpen,Notify,getTest}) {
     };
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setloading(true)
         await Req.post("/test/createtest", { title, link, type })
           .then((res) => {
             if (res.status === 200) {
+                setloading(false)
               Notify()
               getTest()
                 .then(() => {
@@ -38,6 +40,7 @@ export default function AddTests({ open, setOpen,Notify,getTest}) {
     
             }
           }).catch((err) => {
+            setloading(false)
             console.log(err)
           })
       }
