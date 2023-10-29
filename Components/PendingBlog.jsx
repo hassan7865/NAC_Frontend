@@ -90,7 +90,7 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
         to:item.authoremail,
         subject:"Approval Of Blog",
         replyto:"neduetadmissioncell@gmail.com",
-        link:`https://www.nedadmissioncell.com/blogs/${item._id}/${item.title}`
+        link:`https://www.nedadmissioncell.com/blogs`
     
        }
        emailjs.send(serviceId,templateId,templateParams).then(()=>{
