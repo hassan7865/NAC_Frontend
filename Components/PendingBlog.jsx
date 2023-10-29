@@ -82,9 +82,9 @@ export default function PendingBlog({pendBlog,getPendBlog,getApproved}) {
             })
     }
     const sendEmail=(item)=>{
-        emailjs.init("3nbIneBa4IcP2eXat")
-       const serviceId = "service_8ibaqni"
-       const templateId = "template_fww1g9u"
+        emailjs.init("JP2iTACWkmchWXW4x")
+       const serviceId = "service_b2fb7ef"
+       const templateId = "template_43l0rxa"
        const templateParams = {
         sendername:"NedAdmissionCell",
         to:item.authoremail,
