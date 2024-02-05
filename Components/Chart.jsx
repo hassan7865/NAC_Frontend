@@ -5,10 +5,10 @@ export default function Chart({isSmallScreen,count}){
   useEffect(()=>{
     if(count){
       const newData = [...numcount]
-      newData[0] = count.news[0].total
-      newData[1] = count.test[0].total
-      newData[2] = count.Faq[0].total
-      newData[3] = count.papers[0].total
+      newData[0] = count.news[0]?.total
+      newData[1] = count.test[0]?.total
+      newData[2] = count.Faq[0]?.total
+      newData[3] = count.papers[0]?.total
   
       setnumcount(newData)
     }
