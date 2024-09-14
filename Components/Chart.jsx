@@ -4,11 +4,12 @@ export default function Chart({isSmallScreen,count}){
   const [numcount,setnumcount] = useState([0,0,0,0])
   useEffect(()=>{
     if(count){
+      console.log(count)
       const newData = [...numcount]
-      newData[0] = count.news[0]?.total
-      newData[1] = count.test[0]?.total
-      newData[2] = count.Faq[0]?.total
-      newData[3] = count.papers[0]?.total
+      newData[0] = count.news
+      newData[1] = count.test
+      newData[2] = count.faq
+      newData[3] = count.papers
   
       setnumcount(newData)
     }
