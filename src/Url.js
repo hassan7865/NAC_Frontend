@@ -10,4 +10,5 @@ export const token = User && JSON.parse(User)?.token
 export const Req = axios.create({
     baseURL: BASE_URL,
     headers: {token:`Bearer ${token}`},
+    
 });
